@@ -57,3 +57,35 @@ print(s.kthsmallest([2,1,4,3,2], 3))
 # smallest: 1 
 # current_smallest = 2 
 # add 2 to prevs 
+
+
+# strategy 2: utilize a queue 
+# inserts are log n 
+# lookups are constant I believe 
+# bc a priority queue takes advantage of a 
+# min heap 
+import queue as q
+
+class Solution:
+    # @param A : tuple of integers
+    # @param B : integer
+    # @return an integer
+    def kthsmallest(self, arr, k):
+      if k < 1:
+        return k
+      pq = q.PriorityQueue()
+      for i in range(len(arr)):
+        pq.put(arr[i])
+      while (k > 1):
+        pq.get()
+        k -= 1
+      # time is n * log n to insert 
+      # plus k * log n to remove
+      # space is linear
+      return pq.get()
+
+# putting everything in PriorityQueue is linear 
+# PriorityQueue is linear space as well 
+# popping from queue is constant, potentially log n? 
+# yes I think push and pop are both log n because 
+# it uses a tree under the hood
