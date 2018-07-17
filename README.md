@@ -19,3 +19,6 @@ Notes:
 - for 3B, check if there are hints in CTCI, because I am stuck.
   - I am not sure how to get certain subsets to be accounted for
   - I found a correct answer in n^2 but it's not optimal (for with nested while loop)
+  - dealing with continuous subsequences in an array ... ugh
+  
+  
