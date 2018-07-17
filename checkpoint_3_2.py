@@ -87,3 +87,65 @@ print(s.numRange([10, 5, 1, 0, 2], 6, 8)) # 3
 print(s.numRange([-2,5,-1], -2, 2)) # should be 3, breaks and returns 2
 
 print(s.numRange([ 80, 97, 78, 45, 23, 38, 38, 93, 83, 16, 91, 69, 18, 82, 60, 50, 61, 70, 15, 6, 52, 90 ], 99, 269)) # this is supposed to be 58 instead of 24, so my incrementing indexes is not working as expected, ugh
+
+
+# ===========
+# This version technically passes but it takes too long to run
+
+class Solution:
+    # @param A : list of integers
+    # @param B : integer
+    # @param C : integer
+    # @return an integer
+    def numRange(self, A, B, C):
+      arr = A
+      known_ranges = set()
+
+      # I need the for loop because there are 
+      # some subsets I skip because they happen to be 
+      # contained within a few use cases 
+      # this still breaks on negative numbers though!
+      for i in range(len(arr)):
+        num_in_range = i
+        start_index = i
+        end_index = i
+        sum_current = arr[i]
+
+        while (start_index != len(arr)-1 or end_index != len(arr)-1):
+          # do the check 
+          if sum_current >= B and sum_current <= C:
+            if (start_index, end_index) not in known_ranges:
+              known_ranges.add((start_index, end_index))
+            # increment if we haven't seen this range before 
+            # print("current sum", sum_current)
+            # print("current start", arr[start_index])
+            # print("current end", arr[end_index])
+
+          # all of this logic to determine if we 
+          # should increment pointers breaks if 
+          # the values can be negative
+          if end_index == len(arr)-1:
+            sum_current -= arr[start_index]
+            start_index += 1
+          elif sum_current >= B and sum_current <= C:
+            end_index += 1
+            sum_current += arr[end_index]
+          elif sum_current < B:
+            end_index += 1
+            sum_current += arr[end_index]
+          else:
+            # if sum is greater than range 
+            # and end_index is not at the end
+            if end_index == start_index:
+              end_index += 1
+              start_index += 1
+              sum_current = arr[end_index]
+            else:
+              sum_current -= arr[start_index]
+              start_index += 1
+      # do one last check for the last thing in the array 
+      sum_current = arr[start_index]
+      if sum_current >= B and sum_current <= C:
+        if (start_index, end_index) not in known_ranges:
+          known_ranges.add((start_index, end_index))
+      return len(known_ranges)
