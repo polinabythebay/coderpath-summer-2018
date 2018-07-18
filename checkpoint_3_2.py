@@ -13,26 +13,8 @@
 
 ## Problem solving:
 
-# 2 pointers and a rolling sum 
-# traverse the 2 pointers across the array 
-# at the most this will be 2n time, or linear
-# maintaining a rolling sum, so constant space 
-
-# if both pointers are at the end, break out of while loop
-
-# - at every turn check sum against range and increment if 
-# if meets the constraint 
-
-# - then do one of the following:
-
-# [x] if end point is already at the end, increment begin
-#     else:
-# [x] if sum is within range, only increment end pointer 
-# [x] if sum is less than range, only increment end pointer 
-# [x] if sum is greater than range and end == begin, increment both
-# [x] if sum is greater than range and begin < end, increment begin 
-# I think this is called the sliding window technique?
-
+# this problems takes advantage of a sliding window done right (and optimal)
+# this also does not work for negative values unfortunately, but it works for positive values.
 # Correct solution that is fast enough to pass InterviewBit:
 class Solution:
     # @param A : list of integers
