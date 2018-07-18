@@ -33,7 +33,35 @@
 # [x] if sum is greater than range and begin < end, increment begin 
 # I think this is called the sliding window technique?
 
-# NOTE: my solution breaks for negative values
+# Correct solution that is fast enough to pass InterviewBit:
+class Solution:
+    # @param A : list of integers
+    # @param B : integer
+    # @param C : integer
+    # @return an integer
+    def numRange(self, A, B, C):
+      # have three pointers 
+      # so, start every range with every elt in array 
+      # increment that range if within sum
+      # if not within sum, break and start range at next element
+      count = 0
+      for i in range(len(A)):
+        sum = 0
+        for j in range (i, len(A)):
+          sum += A[j]
+          if sum >= B and sum <= C:
+            # print(A[i], A[j])
+            count += 1
+          if sum > C:
+            break
+      return count
+
+# =====================
+# Previous Attempts 
+# =====================
+
+# NOTE: this solution breaks for negative values
+# It's also way too complicated 
 class Solution:
     # @param A : list of integers
     # @param B : integer
