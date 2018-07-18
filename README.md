@@ -20,5 +20,7 @@ Notes:
   - I am not sure how to get certain subsets to be accounted for
   - I found a correct answer in n^2 but it's not optimal (for with nested while loop)
   - dealing with continuous subsequences in an array ... ugh
+  - intended solution is to use three pointers (not 2): ok, I figured it out, but that was tricky
+    
   
   
