@@ -14,6 +14,12 @@ Problems that have not been completed:
 - Checkpoint 4_1 (linked list)
 - Checkpoint 5: https://www.interviewbit.com/courses/programming/checkpoint/5/
 
+TODO:
+
+- read back up on linked lists in order to do the linked list question
+- read back up on permutations and recursion, I can't believe I am already rusty! : ( I tried so hard! 
+- read back up on dynamic programming in order to do the sequence question
+
 Notes:
 
 - for 3B, check if there are hints in CTCI about dealing with continuous subsequences 
