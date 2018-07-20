@@ -13,7 +13,6 @@ Problems that have not been completed:
 
 - Checkpoint 4_1 (linked list)
 - Checkpoint 5: https://www.interviewbit.com/courses/programming/checkpoint/5/
-- HackerRank 2 hour test
 
 Notes:
 
