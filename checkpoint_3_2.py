@@ -1,3 +1,9 @@
+
+# Notes:
+
+# - for 3B, check if there are pointers in CTCI about dealing with continuous subsequences 
+#   - intended solution is to use three pointers, it's not obvious to think that way
+
 # Given an array of non negative integers A, and a range (B, C), 
 # find the number of continuous subsequences in the array which have sum S in the range [B, C] or B <= S <= C
 
