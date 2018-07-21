@@ -9,11 +9,6 @@ Contains the following problems:
 - Checkpoint 3: https://www.interviewbit.com/courses/programming/checkpoint/3/
 - Checkpoint 4: https://www.interviewbit.com/courses/programming/checkpoint/4/
 - Checkpoint 5: https://www.interviewbit.com/courses/programming/checkpoint/5/
-
-Notes:
-
-- for 3B, check if there are pointers in CTCI about dealing with continuous subsequences 
-  - intended solution is to use three pointers, it's not obvious to think that way
     
   
   
