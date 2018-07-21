@@ -17,12 +17,11 @@ Problems that have not been completed:
 TODO:
 
 - read back up on linked lists in order to do the linked list question
-- read back up on permutations and recursion, I can't believe I am already rusty! : ( I tried so hard! 
 - read back up on dynamic programming in order to do the sequence question
 
 Notes:
 
-- for 3B, check if there are hints in CTCI about dealing with continuous subsequences 
+- for 3B, check if there are pointers in CTCI about dealing with continuous subsequences 
   - intended solution is to use three pointers, it's not obvious to think that way
     
   
