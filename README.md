@@ -8,11 +8,12 @@ Contains the following problems:
 - Checkpoint 2: https://www.interviewbit.com/problems/prettyprint/
 - Checkpoint 3: https://www.interviewbit.com/courses/programming/checkpoint/3/
 - Checkpoint 4: https://www.interviewbit.com/courses/programming/checkpoint/4/
+- Checkpoint 5: https://www.interviewbit.com/courses/programming/checkpoint/5/
 
 Problems that have not been completed:
 
 - Checkpoint 4_1 (linked list)
-- Checkpoint 5: https://www.interviewbit.com/courses/programming/checkpoint/5/
+- Checkpoint 5_2 (sequences)
 
 TODO:
 
