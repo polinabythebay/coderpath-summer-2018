@@ -1,4 +1,25 @@
+# faster solution:
 
+class Solution(object):
+    # @param A : tuple of integers
+    # @return an integer
+    def longestConsecutive(self, A):
+      nums = {x:None for x in A}
+      result = 0
+      for key in nums:
+        # check if it is the first elt in the sequence 
+        # by seeing if it's previous elt is in nums
+        if key-1 in nums:
+          continue 
+        else:
+          result = max(result, self._getSeq(nums, key, 0))
+      return result
+    
+    def _getSeq(self, nums, key, size):
+      while key in nums:
+        size += 1
+        key += 1
+      return size
 
 ##### Previous solution attempt
 
